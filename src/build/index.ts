@@ -1,0 +1,1 @@
+export { RostersServiceFactory } from './RostersServiceFactory';
