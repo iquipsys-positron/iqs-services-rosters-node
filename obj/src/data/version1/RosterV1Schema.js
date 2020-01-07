@@ -8,7 +8,7 @@ class RosterV1Schema extends pip_services3_commons_node_1.ObjectSchema {
     constructor() {
         super();
         this.withOptionalProperty('id', pip_services3_commons_node_3.TypeCode.String);
-        this.withRequiredProperty('site_id', pip_services3_commons_node_3.TypeCode.String);
+        this.withRequiredProperty('org_id', pip_services3_commons_node_3.TypeCode.String);
         this.withOptionalProperty('name', pip_services3_commons_node_3.TypeCode.String);
         this.withOptionalProperty('shift_id', pip_services3_commons_node_3.TypeCode.String);
         this.withRequiredProperty('start_time', pip_services3_commons_node_3.TypeCode.DateTime);

@@ -12,7 +12,7 @@ export class RostersMongoDbPersistence extends IdentifiableMongoDbPersistence<Ro
 
     constructor() {
         super('rosters');
-        super.ensureIndex({ site_id: 1, start_time: -1, end_time: -1 });
+        super.ensureIndex({ org_id: 1, start_time: -1, end_time: -1 });
         this._maxPageSize = 1000;
     }
     
@@ -25,9 +25,9 @@ export class RostersMongoDbPersistence extends IdentifiableMongoDbPersistence<Ro
         if (id != null)
             criteria.push({ _id: id });
 
-        let site_id = filter.getAsNullableString('site_id');
-        if (site_id != null)
-            criteria.push({ site_id: site_id });
+        let org_id = filter.getAsNullableString('org_id');
+        if (org_id != null)
+            criteria.push({ org_id: org_id });
 
         let shift = filter.getAsNullableBoolean('shift');
         if (shift != null)

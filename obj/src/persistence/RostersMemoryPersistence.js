@@ -21,7 +21,7 @@ class RostersMemoryPersistence extends pip_services3_data_node_1.IdentifiableMem
     composeFilter(filter) {
         filter = filter || new pip_services3_commons_node_1.FilterParams();
         let id = filter.getAsNullableString('id');
-        let siteId = filter.getAsNullableString('site_id');
+        let orgId = filter.getAsNullableString('org_id');
         let shift = filter.getAsNullableBoolean('shift');
         let fromTime = filter.getAsNullableDateTime('from_time');
         let toTime = filter.getAsNullableDateTime('to_time');
@@ -29,7 +29,7 @@ class RostersMemoryPersistence extends pip_services3_data_node_1.IdentifiableMem
         return (item) => {
             if (id && item.id != id)
                 return false;
-            if (siteId && item.site_id != siteId)
+            if (orgId && item.org_id != orgId)
                 return false;
             if (shift != null && (!!item.shift_id) != shift)
                 return false;

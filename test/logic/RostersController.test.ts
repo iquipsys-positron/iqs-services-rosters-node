@@ -43,7 +43,7 @@ let ROSTER_OBJ3: RosterObjectV1 = {
 
 let ROSTER1: RosterV1 = {
     id: '1',
-    site_id: '1',
+    org_id: '1',
     name: 'Test roster 1',
     start_time: new Date(now.getTime()),
     end_time: new Date(now.getTime() + 8 * 3600000),
@@ -51,7 +51,7 @@ let ROSTER1: RosterV1 = {
 };
 let ROSTER2: RosterV1 = {
     id: '2',
-    site_id: '1',
+    org_id: '1',
     name: 'Test roster 2',
     start_time: new Date(now.getTime()),
     end_time: new Date(now.getTime() + 8 * 3600000),
@@ -62,7 +62,7 @@ let toTime = new Date(now.getTime() + 8 * 3600000);
 
 let ROSTER3: RosterV1 = {
     id: '3',
-    site_id: '2',
+    org_id: '2',
     name: 'Test roster 3',
     start_time: new Date(now.getTime() + 8 * 3600000),
     end_time: new Date(now.getTime() + 16 * 3600000),
@@ -101,7 +101,7 @@ suite('RostersController', ()=> {
                         assert.isNull(err);
 
                         assert.isObject(roster);
-                        assert.equal(roster.site_id, ROSTER1.site_id);
+                        assert.equal(roster.org_id, ROSTER1.org_id);
                         assert.equal(roster.name, ROSTER1.name);
 
                         roster1 = roster;
@@ -118,7 +118,7 @@ suite('RostersController', ()=> {
                         assert.isNull(err);
 
                         assert.isObject(roster);
-                        assert.equal(roster.site_id, ROSTER2.site_id);
+                        assert.equal(roster.org_id, ROSTER2.org_id);
                         assert.equal(roster.name, ROSTER2.name);
 
                         roster2 = roster;

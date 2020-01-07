@@ -33,7 +33,7 @@ export class RostersMemoryPersistence
         filter = filter || new FilterParams();
         
         let id = filter.getAsNullableString('id');
-        let siteId = filter.getAsNullableString('site_id');
+        let orgId = filter.getAsNullableString('org_id');
         let shift = filter.getAsNullableBoolean('shift');
         let fromTime = filter.getAsNullableDateTime('from_time');
         let toTime = filter.getAsNullableDateTime('to_time');
@@ -42,7 +42,7 @@ export class RostersMemoryPersistence
         return (item) => {
             if (id && item.id != id) 
                 return false;
-            if (siteId && item.site_id != siteId) 
+            if (orgId && item.org_id != orgId) 
                 return false;
             if (shift != null && (!!item.shift_id) != shift) 
                 return false;

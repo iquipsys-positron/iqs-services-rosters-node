@@ -4,7 +4,7 @@ import { RosterObjectV1 } from './RosterObjectV1';
 
 export class RosterV1 implements IStringIdentifiable {
     public id: string;
-    public site_id: string;
+    public org_id: string;
     public name?: string;
     public shift_id?: string;
 

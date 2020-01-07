@@ -33,7 +33,7 @@ class RostersController {
     fixRoster(roster) {
         roster.start_time = pip_services3_commons_node_3.DateTimeConverter.toNullableDateTime(roster.start_time);
         roster.end_time = pip_services3_commons_node_3.DateTimeConverter.toNullableDateTime(roster.end_time);
-        // Now date can start at any time according to site time zone
+        // Now date can start at any time according to organization time zone
         // if (roster.shift_id == null && roster.start_time != null) {
         //     let t = moment.utc(roster.start_time).startOf('day');
         //     roster.start_time = t.toDate();

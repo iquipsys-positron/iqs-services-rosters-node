@@ -6,7 +6,7 @@ const pip_services3_mongodb_node_1 = require("pip-services3-mongodb-node");
 class RostersMongoDbPersistence extends pip_services3_mongodb_node_1.IdentifiableMongoDbPersistence {
     constructor() {
         super('rosters');
-        super.ensureIndex({ site_id: 1, start_time: -1, end_time: -1 });
+        super.ensureIndex({ org_id: 1, start_time: -1, end_time: -1 });
         this._maxPageSize = 1000;
     }
     composeFilter(filter) {
@@ -15,9 +15,9 @@ class RostersMongoDbPersistence extends pip_services3_mongodb_node_1.Identifiabl
         let id = filter.getAsNullableString('id');
         if (id != null)
             criteria.push({ _id: id });
-        let site_id = filter.getAsNullableString('site_id');
-        if (site_id != null)
-            criteria.push({ site_id: site_id });
+        let org_id = filter.getAsNullableString('org_id');
+        if (org_id != null)
+            criteria.push({ org_id: org_id });
         let shift = filter.getAsNullableBoolean('shift');
         if (shift != null)
             criteria.push({ shift_id: { $exists: shift } });

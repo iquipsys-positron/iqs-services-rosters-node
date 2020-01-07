@@ -8,7 +8,7 @@ export class RosterV1Schema extends ObjectSchema {
     public constructor() {
         super();
         this.withOptionalProperty('id', TypeCode.String);
-        this.withRequiredProperty('site_id', TypeCode.String);
+        this.withRequiredProperty('org_id', TypeCode.String);
         this.withOptionalProperty('name', TypeCode.String);
         this.withOptionalProperty('shift_id', TypeCode.String);
 
